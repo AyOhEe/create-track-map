@@ -6,7 +6,7 @@ import com.simibubi.create.content.trains.entity.TravellingPoint
 import com.simibubi.create.content.trains.graph.TrackEdge
 import com.simibubi.create.content.trains.graph.TrackNode
 import com.simibubi.create.content.trains.graph.TrackNodeLocation
-import com.simibubi.create.foundation.utility.Couple
+import net.createmod.catnip.data.Couple
 import littlechasiu.ctm.model.*
 import net.minecraft.resources.ResourceKey
 import net.minecraft.world.level.Level
