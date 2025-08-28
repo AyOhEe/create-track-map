@@ -10,28 +10,23 @@
 ![Minecraft versions](https://img.shields.io/badge/minecraft-1.20.1%20•%201.21.1-blue)
 ![Download count](https://img.shields.io/modrinth/dt/NHRXB9Bi)
 
-<!--![Available for Fabric](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/522a26e2c91cbafab79ddbbc6d942f1720249a8c/fabric.svg)
-[![Requires Create ≥6.0](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/522a26e2c91cbafab79ddbbc6d942f1720249a8c/create-0.5.svg)](https://modrinth.com/mod/create-fabric)
-[![Requires Fabric API](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/1fc7a8dfba76460bedba7fa0b5516b917815e39c/fabric-api.svg)](https://modrinth.com/mod/fabric-api)
-[![Requires Fabric Kotlin](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/1fc7a8dfba76460bedba7fa0b5516b917815e39c/fabric-kotlin.svg)](https://modrinth.com/mod/fabric-language-kotlin)-->
 
 ![Available for Fabric](static/fabric.png)
-[![Requires Create ≥6.0](static/create.png)](https://modrinth.com/mod/create)
+[![Requires Create ≥6.0](static/create.png)](https://modrinth.com/mod/create-fabric)
 [![Requires Fabric API](static/fabric_api.png)]((https://modrinth.com/mod/fabric-api))
 [![Requires Kotlin Language Fabric](static/kotlin_fabric.png)](https://modrinth.com/mod/fabric-language-kotlin)
-
 
 ![Available for Forge](static/neoforge.png)
 [![Requires Create ≥6.0](static/create.png)](https://modrinth.com/mod/create)
 [![Requires Kotlin for Forge](static/kotlin_forge.png)](https://modrinth.com/mod/kotlin-for-forge)
 
-[![Available on GitHub](static/github.png)](https://github.com/jenchanws/create-track-map)
-[![Available on Curseforge](static/curseforge.png)](https://modrinth.com/mod/create-track-map)
-[![Available on Modrinth](static/modrinth.png)](https://modrinth.com/mod/create-track-map)
+[![Available on GitHub](static/github.png)](https://github.com/AyOhEe/create-track-map)
+[![Available on Curseforge](static/curseforge.png)](https://modrinth.com/project/create-track-map-(unofficial-fork))
+[![Available on Modrinth](static/modrinth.png)](https://legacy.curseforge.com/minecraft/mc-mods/create-track-map-unofficial-fork)
 
 ### Fork notice
 
-This is a fork of [jenchanws/create-track-map](https://github.com/jenchanws/create-track-map) - while I have been given permission to publicly release my changes under a separate modrinth/curseforge page, this is not endorsed by jenchanws - Please do not contact her regarding issues with this fork, and all issues regarding this version of the mod should go *here* and ***not*** in the original repository
+This is a fork of [jenchanws/create-track-map](https://github.com/jenchanws/create-track-map). While I have been given permission to publicly release my changes under a separate modrinth/curseforge page, this is not endorsed by jenchanws - Please do not contact her regarding issues with this fork, and all issues regarding this version of the mod should go *here* and ***not*** in the original repository
 
 ### Summary
 
