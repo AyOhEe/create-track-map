@@ -11,18 +11,18 @@
 ![Download count](https://img.shields.io/modrinth/dt/NHRXB9Bi)
 
 
-![Available for Fabric](static/fabric.png)
-[![Requires Create ≥6.0](static/create.png)](https://modrinth.com/mod/create-fabric)
-[![Requires Fabric API](static/fabric_api.png)](https://modrinth.com/mod/fabric-api)
-[![Requires Kotlin Language Fabric](static/kotlin_fabric.png)](https://modrinth.com/mod/fabric-language-kotlin)
+[<img src="static/fabric.png" height=56 title="Available for Fabric">]()
+[<img src="static/create.png" height=56 title="Requires Create ≥6.0">](https://modrinth.com/mod/create-fabric)
+[<img src="static/fabric_api.png" height=56 title="Requires Fabric API">](https://modrinth.com/mod/fabric-api)
+[<img src="static/kotlin_fabric.png" height=56 title="Requires Kotlin Language Fabric">](https://modrinth.com/mod/fabric-language-kotlin)
 
-![Available for Forge](static/neoforge.png)
-[![Requires Create ≥6.0](static/create.png)](https://modrinth.com/mod/create)
-[![Requires Kotlin for Forge](static/kotlin_forge.png)](https://modrinth.com/mod/kotlin-for-forge)
+[<img src="static/neoforge.png" height=56 title="Available for NeoForge">]()
+[<img src="static/create.png" height=56 title="Requires Create ≥6.0">](https://modrinth.com/mod/create)
+[<img src="static/kotlin_forge.png" height=56 title="Requires Kotlin for Forge">](https://modrinth.com/mod/kotlin-for-forge)
 
-[![Available on GitHub](static/github.png)](https://github.com/AyOhEe/create-track-map)
-[![Available on Modrinth](static/modrinth.png)](https://modrinth.com/project/create-track-map-(unofficial-fork))
-[![Available on Curseforge](static/curseforge.png)](https://legacy.curseforge.com/minecraft/mc-mods/create-track-map-unofficial-fork)
+[<img src="static/github.png" height=56 title="Available on Github">](https://github.com/AyOhEe/create-track-map)
+[<img src="static/modrinth.png" height=56 title="Available on Modrinth">](https://modrinth.com/project/create-track-map-(unofficial-fork))
+[<img src="static/curseforge.png" height=56 title="Available on Curseforge">](https://legacy.curseforge.com/minecraft/mc-mods/create-track-map-unofficial-fork)
 
 ### Fork notice
 
