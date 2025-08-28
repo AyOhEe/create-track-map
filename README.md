@@ -13,7 +13,7 @@
 
 ![Available for Fabric](static/fabric.png)
 [![Requires Create ≥6.0](static/create.png)](https://modrinth.com/mod/create-fabric)
-[![Requires Fabric API](static/fabric_api.png)]((https://modrinth.com/mod/fabric-api))
+[![Requires Fabric API](static/fabric_api.png)](https://modrinth.com/mod/fabric-api)
 [![Requires Kotlin Language Fabric](static/kotlin_fabric.png)](https://modrinth.com/mod/fabric-language-kotlin)
 
 ![Available for Forge](static/neoforge.png)
