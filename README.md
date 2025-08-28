@@ -21,8 +21,8 @@
 [![Requires Kotlin for Forge](static/kotlin_forge.png)](https://modrinth.com/mod/kotlin-for-forge)
 
 [![Available on GitHub](static/github.png)](https://github.com/AyOhEe/create-track-map)
-[![Available on Curseforge](static/curseforge.png)](https://modrinth.com/project/create-track-map-(unofficial-fork))
-[![Available on Modrinth](static/modrinth.png)](https://legacy.curseforge.com/minecraft/mc-mods/create-track-map-unofficial-fork)
+[![Available on Modrinth](static/modrinth.png)](https://modrinth.com/project/create-track-map-(unofficial-fork))
+[![Available on Curseforge](static/curseforge.png)](https://legacy.curseforge.com/minecraft/mc-mods/create-track-map-unofficial-fork)
 
 ### Fork notice
 
