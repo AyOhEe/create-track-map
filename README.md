@@ -4,73 +4,43 @@
 
 <!-- modrinth_exclude.end -->
 
-# Create Track Map
+# Create Track Map: Unofficial fork
 
-![Mod version](https://img.shields.io/modrinth/v/gxoNIjg6)
-![Minecraft versions](https://img.shields.io/badge/minecraft-1.18.2%20•%201.19.2-blue)
-![Download count](https://img.shields.io/modrinth/dt/gxoNIjg6)
+![Mod version](https://img.shields.io/modrinth/v/NHRXB9Bi)
+![Minecraft versions](https://img.shields.io/badge/minecraft-1.20.1%20•%201.21.1-blue)
+![Download count](https://img.shields.io/modrinth/dt/NHRXB9Bi)
 
-![Available for Fabric](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/522a26e2c91cbafab79ddbbc6d942f1720249a8c/fabric.svg)
-[![Requires Create ≥0.5](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/522a26e2c91cbafab79ddbbc6d942f1720249a8c/create-0.5.svg)](https://modrinth.com/mod/create-fabric)
-[![Requires Fabric API](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/1fc7a8dfba76460bedba7fa0b5516b917815e39c/fabric-api.svg)](https://modrinth.com/mod/fabric-api)
-[![Requires Fabric Kotlin](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/1fc7a8dfba76460bedba7fa0b5516b917815e39c/fabric-kotlin.svg)](https://modrinth.com/mod/fabric-language-kotlin)
 
-![Available for Forge](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/522a26e2c91cbafab79ddbbc6d942f1720249a8c/forge.svg)
-[![Requires Create ≥0.5](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/522a26e2c91cbafab79ddbbc6d942f1720249a8c/create-0.5.svg)](https://modrinth.com/mod/create)
-[![Requires Kotlin for Forge](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/522a26e2c91cbafab79ddbbc6d942f1720249a8c/forge-kotlin.svg)](https://modrinth.com/mod/kotlin-for-forge)
+<!--[<img src="static/fabric.png" height=56 title="Available for Fabric">]()
+[<img src="static/create.png" height=56 title="Requires Create ≥6.0">](https://modrinth.com/mod/create-fabric)
+[<img src="static/fabric_api.png" height=56 title="Requires Fabric API">](https://modrinth.com/mod/fabric-api)
+[<img src="static/kotlin_fabric.png" height=56 title="Requires Kotlin Language Fabric">](https://modrinth.com/mod/fabric-language-kotlin)
+-->
 
-[![Available on GitHub](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/0dbefc2fcbec362d14f1689acb807183ceffdbe1/github.svg)](https://github.com/jenchanws/create-track-map)
-[![Available on Modrinth](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/0dbefc2fcbec362d14f1689acb807183ceffdbe1/modrinth.svg)](https://modrinth.com/mod/create-track-map)
-[![Find me on Discord](https://raw.githubusercontent.com/gist/jenchanws/842eee8428e1e0aec20de4594878156a/raw/0dbefc2fcbec362d14f1689acb807183ceffdbe1/discord.svg)](https://smp.littlechasiu.com/discord)
+[<img src="static/neoforge.png" height=56 title="Available for NeoForge">]()
+[<img src="static/create.png" height=56 title="Requires Create ≥6.0">](https://modrinth.com/mod/create)
+[<img src="static/kotlin_forge.png" height=56 title="Requires Kotlin for Forge">](https://modrinth.com/mod/kotlin-for-forge)
 
-Create Track Map (CTM) is a multi-loader mod that displays a track map of Create trains in your world, including all tracks, signals, stations, and trains. The signals and trains are updated in (practically) real time.
+[<img src="static/github.png" height=56 title="Available on Github">](https://github.com/AyOhEe/create-track-map)
+[<img src="static/modrinth.png" height=56 title="Available on Modrinth">](https://modrinth.com/project/create-track-map-(unofficial-fork))
+[<img src="static/curseforge.png" height=56 title="Available on Curseforge">](https://legacy.curseforge.com/minecraft/mc-mods/create-track-map-unofficial-fork)
 
-![Example track map](https://cdn.modrinth.com/data/gxoNIjg6/images/8aa58af4ca9cc459a84ce492770a92e358cd2714.gif)
+### Fork notice
 
-# Usage
+This is a fork of [jenchanws/create-track-map](https://github.com/jenchanws/create-track-map). While I have been given permission to publicly release my changes under a separate modrinth/curseforge page, this is not endorsed by jenchanws - Please do not contact her regarding issues with this fork, and all issues regarding this version of the mod should go *here* and ***not*** in the original repository
 
-CTM is available for [download on Modrinth](https://modrinth.com/mod/create-track-map). **Please make sure you download the correct version for your loader, Minecraft version, and Create version.** Below is the compatibility chart for Create versions:
+### Summary
 
-| | CTM ≤1.3 | CTM 1.4 | CTM ≥1.5 |
-|:---|:--:|:--:|:--:|
-| **Create 0.5.0** | ✅ | ✅ | ❌ |
-| **Create 0.5.1** | ❌ | ✅ | ✅ |
+A multi-loader mod that displays a track map of Create trains in your world,
+including all tracks, signals, stations, and trains. The signals and
+trains are updated in (practically) real time.
 
-## Installation
-Simply place the .jar file in your mods folder (or install with a modloader) like any other mod! CTM is intended to be a server side mod, but can also run in single-player worlds and LAN servers. It runs a web server on port `3876` by default, but [this can be configured](#configuration). You must forward this port if you wish to see the map. *[(How do I do this?)](https://www.google.com/search?q=how+to+I+port+forward)* 
+![Example track 
+map](https://cdn.modrinth.com/data/gxoNIjg6/images/8aa58af4ca9cc459a84ce492770a92e358cd2714.gif)
 
-The map itself is visible at the root (by default `http://localhost:3876/`). If using a proxy to serve the map, make sure to configure it to let Server-Sent Events through.
+### Usage
 
-### *Singleplayer*
-The map is hosted on your computer so while Minecraft is open, enter `http://localhost:3876/` into your browser.
-
-### *Multiplayer*
-
- **A) Local (LAN) server**\
-The map is still hosted on your computer so while the game is open, enter `http://localhost:3876/` into your browser.\
-Those in your household can see the map by entering `http://[your computer's IPV4 address]:3876/` into their browser.\
-*[How do I see my computer's IPV4 address?](https://www.google.com/search?q=how+do+i+see+my+local+ipv4+address)*
-
-**B) The server is on my PC**\
-The map is still hosted on your computer so while the server is open,  enter `http://localhost:3876/` into your browser.\
-Those in your household can see the map by entering `http://[your computer's IPV4 address]:3876/` into their browser.\
-Those outside your household can see the map by entering `http://[your public IPV4 address]:3876/` into their browser.\
-*[How do I see my public IPV4 address?](https://www.google.com/search?q=what+is+my+public+ipv4+address)*
-
-**C) The server is hosted with a hosting service**\
-The map is hosted with the server on that service. You can see the map at `[your server address]:3876/` while the server is up.\
-**NOTE: YOUR SERVICE MUST SUPPORT EXTRA PORT FORWARDING.** You can check with support/the docs for the service or just good old Google. If the service doesn't support this, you are out of luck. You can switch services or try hosting your own.
-
-*Just so it's clear: Do not include the brackets around your IPV4 address! For example: `192.168.0.0:3876`*
-
-## READ THIS BEFORE ASKING FOR HELP!
-
-To use this mod, **you must be able to open a second port**, in addition to your Minecraft server, which CTM will run its web server on. If you are using Aternos, this is not possible. If you are using a shared hosting provider, please contact your host for assistance in opening a port. No support will be provided to open a port or to diagnose issues which are not caused by a bug in the mod.
-
-# Advanced Usage
-
-### CTM API
-CTM provides the following API, also accessible through the same port:
+CTM is intended to be a server side mod, but can also run in single-player worlds and LAN servers. It runs a web server, on port 3876 by default, that provides the following API:
 
 - `/api/network`, `/api/network.rt`: List of all track pieces and train stations
 - `/api/signals`, `/api/signals.rt`: List of all train signals, including their states
@@ -81,7 +51,9 @@ CTM provides the following API, also accessible through the same port:
 - `/api/style.css`: CSS style sheet generated from configured colors and fonts
 - `/api/config.json`: Map configuration
 
-The `.rt` versions update in real time with Server-Sent Events (SSE).
+The `.rt` versions update in real time with Server-Sent Events (SSE). If using a proxy to serve the map, make sure to configure it to let Server-Sent Events through.
+
+The map itself is visible at the root (by default `http://localhost:3876/`).
 
 ### Configuration
 
