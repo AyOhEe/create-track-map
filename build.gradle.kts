@@ -1,8 +1,8 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 plugins {
-  kotlin("jvm") version "1.8.10"
-  kotlin("plugin.serialization") version "1.8.10"
+  kotlin("jvm") version "2.0.0"
+  kotlin("plugin.serialization") version "2.0.0"
   java
   id("fabric-loom") version "1.1-SNAPSHOT"
   id("com.github.johnrengelman.shadow") version "7.1.2"
@@ -25,9 +25,11 @@ repositories {
   maven("https://jitpack.io")  // MixinExtras, Fabric ASM
   maven("https://maven.jamieswhiteshirt.com/libs-release")  // Reach Entity Attributes
   maven("https://mvn.devos.one/snapshots/")  // Create Fabric
+  maven("https://mvn.devos.one/releases") // Porting lib
+  maven("https://raw.githubusercontent.com/Fuzss/modresources/main/maven") // Forge config API port
   maven("https://api.modrinth.com/maven")  // LazyDFU
-  maven("https://maven.tterrag.com/")  // Flywheel
   maven("https://www.cursemaven.com")  // Forge Config API Port
+  maven("https://modmaven.dev") // Flywheel
 }
 
 val shadowDep: Configuration by configurations.creating
