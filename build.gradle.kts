@@ -1,8 +1,8 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 plugins {
-  kotlin("jvm") version "2.0.0"
-  kotlin("plugin.serialization") version "2.0.0"
+  kotlin("jvm") version "1.8.10"
+  kotlin("plugin.serialization") version "1.8.10"
   java
   id("fabric-loom") version "1.1-SNAPSHOT"
   id("com.github.johnrengelman.shadow") version "7.1.2"
