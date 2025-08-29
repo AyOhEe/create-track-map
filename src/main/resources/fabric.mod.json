@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "Create Track Map",
   "description": "A map of Create train tracks",
-  "authors": ["LittleChaSiu"],
+  "authors": ["LittleChaSiu", "AyOhEe"],
   "license": "MIT",
   "icon": "assets/littlechasiu/ctm/static/assets/logo.png",
   "environment": "*",
