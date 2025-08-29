@@ -251,8 +251,12 @@ jarJar {
     }
 }
 
-jar {
+tasks.named('jarJar') {
     archiveFileName = "create-track-map-$mod_version+mc$minecraft_version-neoforge.jar"
+}
+
+jar {
+    archiveFileName = "create-track-map-$mod_version+mc$minecraft_version-neoforge-slim.jar"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -273,7 +277,8 @@ tasks.withType(ProcessResources).configureEach {
             mod_license            : mod_license,
             mod_version            : mod_version,
             mod_authors            : mod_authors,
-            mod_description        : mod_description
+            mod_description        : mod_description,
+            create_version         : create_version
     ]
     inputs.properties replaceProperties
 
