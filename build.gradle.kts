@@ -22,14 +22,13 @@ val archives_version = "$mod_version+mc$minecraft_version-fabric"
 
 repositories {
   mavenCentral()
-  maven("https://jitpack.io")  // MixinExtras, Fabric ASM
   maven("https://maven.jamieswhiteshirt.com/libs-release")  // Reach Entity Attributes
   maven("https://mvn.devos.one/snapshots/")  // Create Fabric
-  maven("https://mvn.devos.one/releases") // Porting lib
   maven("https://raw.githubusercontent.com/Fuzss/modresources/main/maven") // Forge config API port
   maven("https://api.modrinth.com/maven")  // LazyDFU
   maven("https://www.cursemaven.com")  // Forge Config API Port
   maven("https://modmaven.dev") // Flywheel
+  maven("https://jitpack.io")  // MixinExtras, Fabric ASM
 }
 
 val shadowDep: Configuration by configurations.creating
@@ -53,7 +52,6 @@ dependencies {
   modImplementation("net.fabricmc:fabric-language-kotlin:$fabric_kotlin_version")
 
   modImplementation("com.simibubi.create:create-fabric-${minecraft_version}:$create_version+mc$minecraft_version")
-  modImplementation("io.github.fabricators_of_create.Porting-Lib:Porting-Lib:$porting_lib_version")
 
   shadowDep("io.ktor:ktor-server-core-jvm:$ktor_version")
   shadowDep("io.ktor:ktor-server-cio-jvm:$ktor_version")
