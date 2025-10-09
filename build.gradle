@@ -1,0 +1,130 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.8.10'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.10'
+    id 'fabric-loom' version '1.1-SNAPSHOT'
+    id 'com.github.johnrengelman.shadow' version "7.1.2"
+    id 'maven-publish'
+}
+
+var mod_version = project.mod_version
+var minecraft_version = project.minecraft_version
+var maven_group = project.maven_group
+var archives_base_name = project.archivesBaseName
+var create_version_short = project.create_version_short
+
+version = mod_version
+group = maven_group
+
+var archives_version = "$mod_version+mc$minecraft_version-fabric"
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    //mavenCentral()
+    maven { url = "https://maven.jamieswhiteshirt.com/libs-release"}  // Reach Entity Attributes
+    maven { url = "https://mvn.devos.one/snapshots/" }  // Create Fabric
+    maven { url = "https://mvn.devos.one/releases/" }  // Porting Lib
+    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven" } // Forge config API port
+    maven { url = "https://api.modrinth.com/maven" }  // LazyDFU
+    maven { url = "https://www.cursemaven.com" }  // Forge Config API Port
+    maven { url = "https://modmaven.dev" } // Flywheel
+}
+
+var fabric_loader_version = project.fabric_loader_version
+var fabric_api_version = project.fabric_api_version
+var fabric_kotlin_version = project.fabric_kotlin_version
+var create_version = project.create_version
+var ktor_version = project.ktor_version
+var kotlin_json_version = project.kotlin_json_version
+var kotlin_css_version = project.kotlin_css_version
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings loom.officialMojangMappings()
+
+    modImplementation("net.fabricmc:fabric-loader:$fabric_loader_version")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:$fabric_api_version")
+    modImplementation("net.fabricmc:fabric-language-kotlin:$fabric_kotlin_version")
+
+    modImplementation("com.simibubi.create:create-fabric-${minecraft_version}:$create_version+mc$minecraft_version")
+
+    shadow("io.ktor:ktor-server-core-jvm:$ktor_version")
+    shadow("io.ktor:ktor-server-cio-jvm:$ktor_version")
+    shadow("io.ktor:ktor-server-cors-jvm:$ktor_version")
+    shadow("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlin_json_version")
+    shadow("org.jetbrains.kotlin-wrappers:kotlin-css:$kotlin_css_version")
+
+    // shadow dependencies don't appear to load properly in development environments, so we have to specify this twice
+    modRuntimeOnly("io.ktor:ktor-server-core-jvm:$ktor_version")
+    modRuntimeOnly("io.ktor:ktor-server-cio-jvm:$ktor_version")
+    modRuntimeOnly("io.ktor:ktor-server-cors-jvm:$ktor_version")
+    modRuntimeOnly("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlin_json_version")
+    modRuntimeOnly("org.jetbrains.kotlin-wrappers:kotlin-css:$kotlin_css_version")
+}
+
+var targetJavaVersion = 17
+
+processResources {
+    inputs.property "version", project.version
+    filteringCharset = "UTF-8"
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version,
+               "minecraft_version" : minecraft_version,
+               "fabric_loader_version" : fabric_loader_version,
+               "fabric_api_version" : fabric_api_version,
+               "fabric_kotlin_version" : fabric_kotlin_version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 17
+    options.encoding = "UTF-8"
+    options.release.set(targetJavaVersion)
+}
+
+java {
+    withSourcesJar()
+
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+
+    var javaVersion = JavaVersion.toVersion(targetJavaVersion)
+    if (JavaVersion.current() < javaVersion) {
+        toolchain.languageVersion.set(JavaLanguageVersion.of(targetJavaVersion))
+    }
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = targetJavaVersion.toString()
+}
+
+shadowJar {
+    archiveBaseName.set(archives_base_name)
+    archiveVersion.set(archives_version)
+    archiveClassifier.set("slim")
+
+    dependencies {
+        exclude(dependency("org.jetbrains.kotlin:.*"))
+        exclude(dependency("org.jetbrains.kotlinx:kotlinx-coroutines-.*"))
+        exclude(dependency("org.slf4j:.*"))
+    }
+    configurations = [project.configurations.shadow]
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    mergeServiceFiles {
+        include 'META-INF/services/*'
+    }
+}
+
+remapJar {
+    archiveBaseName.set(archives_base_name)
+    archiveVersion.set(archives_version)
+    archiveClassifier.set("")
+
+    dependsOn(shadowJar)
+    mustRunAfter(shadowJar)
+    input.set(shadowJar.archivePath)
+}
