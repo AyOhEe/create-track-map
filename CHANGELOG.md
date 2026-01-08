@@ -1,2 +1,3 @@
-- Added support for Minecraft 1.21
-- Added support for Create 6.0.4
+- Updated create to 6.0.8
+- Updated KotlinForForge to 5.10.0
+- Updated KTOR to 3.3.0

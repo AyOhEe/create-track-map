@@ -48,7 +48,7 @@ class Server {
     "trains" to LayerConfig(label = "Trains"),
   )
 
-  private var server: CIOApplicationEngine? = null
+  private var server: EmbeddedServer<CIOApplicationEngine, CIOApplicationEngine.Configuration>? = null
 
   fun start() {
     if (!enable) {
