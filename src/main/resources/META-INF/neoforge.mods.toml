@@ -1,14 +1,16 @@
 modLoader = "kotlinforforge"
 loaderVersion="${kff_version_range}"
 license="${mod_license}"
+issueTrackerURL="https://github.com/AyOhEe/create-track-map/issues"
 
 [[mods]]
 modId = "${mod_id}"
 version = "${mod_version}"
 displayName = "${mod_name}"
+displayURL="https://github.com/AyOhEe/create-track-map"
 authors = "${mod_authors}"
 description = "${mod_description}"
-logoFile = "icon.png"
+logoFile = "assets/littlechasiu/ctm/static/assets/logo.png"
 
 [[dependencies.${mod_id}]]
 modId = "neoforge"

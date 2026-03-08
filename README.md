@@ -12,7 +12,7 @@
 
 
 [<img src="static/fabric.png" height=56 title="Available for Fabric">](https://fabricmc.net/)
-[<img src="static/create_51.png" height=56 title="Requires Create ≥0.5.1">](https://modrinth.com/mod/create-fabric)
+[<img src="static/create.png" height=56 title="Requires Create ≥6.0">](https://modrinth.com/mod/create-fabric)
 [<img src="static/fabric_api.png" height=56 title="Requires Fabric API">](https://modrinth.com/mod/fabric-api)
 [<img src="static/kotlin_fabric.png" height=56 title="Requires Kotlin Language Fabric">](https://modrinth.com/mod/fabric-language-kotlin)
 
