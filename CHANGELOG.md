@@ -1,1 +1,3 @@
-- Added support for Minecraft 1.20.1.
+- Updated Create to 6.0.7
+- Updated KTOR to 3.3.0
+- Update Fabric Language Kotlin to 1.13.8

@@ -1,7 +1,7 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.8.10'
-    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.10'
-    id 'fabric-loom' version '1.1-SNAPSHOT'
+    id 'org.jetbrains.kotlin.jvm' version '2.3.0'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '2.3.0'
+    id 'fabric-loom' version '1.10-SNAPSHOT'
     id 'com.github.johnrengelman.shadow' version "7.1.2"
     id 'maven-publish'
 }
@@ -23,13 +23,13 @@ base {
 
 repositories {
     //mavenCentral()
-    maven { url = "https://maven.jamieswhiteshirt.com/libs-release"}  // Reach Entity Attributes
-    maven { url = "https://mvn.devos.one/snapshots/" }  // Create Fabric
-    maven { url = "https://mvn.devos.one/releases/" }  // Porting Lib
-    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven" } // Forge config API port
-    maven { url = "https://api.modrinth.com/maven" }  // LazyDFU
+    maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
+    maven { url = "https://mvn.devos.one/releases" } // Porting Lib releases
+    maven { url = "https://mvn.devos.one/snapshots" } // Create and several dependencies
+    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven" } // Forge Config API Port
+
     maven { url = "https://www.cursemaven.com" }  // Forge Config API Port
-    maven { url = "https://modmaven.dev" } // Flywheel
+    maven { url = "https://maven.createmod.net/" } // Ponder, Flywheel
 }
 
 var fabric_loader_version = project.fabric_loader_version
@@ -48,7 +48,7 @@ dependencies {
     modImplementation("net.fabricmc.fabric-api:fabric-api:$fabric_api_version")
     modImplementation("net.fabricmc:fabric-language-kotlin:$fabric_kotlin_version")
 
-    modImplementation("com.simibubi.create:create-fabric-${minecraft_version}:$create_version+mc$minecraft_version")
+    modImplementation("com.simibubi.create:create-fabric-$minecraft_version:$create_version")
 
     shadow("io.ktor:ktor-server-core-jvm:$ktor_version")
     shadow("io.ktor:ktor-server-cio-jvm:$ktor_version")
@@ -72,6 +72,7 @@ processResources {
 
     filesMatching("fabric.mod.json") {
         expand "version": project.version,
+               "create_version_short": create_version_short,
                "minecraft_version" : minecraft_version,
                "fabric_loader_version" : fabric_loader_version,
                "fabric_api_version" : fabric_api_version,
