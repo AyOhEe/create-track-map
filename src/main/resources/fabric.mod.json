@@ -23,5 +23,9 @@
     "fabric-language-kotlin": ">=${fabric_kotlin_version}",
     "minecraft": "${minecraft_version}",
     "java": ">=17"
+  },
+  "contact": {
+    "homepage": "https://github.com/AyOhEe/create-track-map",
+    "issues": "https://github.com/AyOhEe/create-track-map/issues"
   }
 }
