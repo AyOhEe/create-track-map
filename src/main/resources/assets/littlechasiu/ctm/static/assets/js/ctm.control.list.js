@@ -73,9 +73,11 @@ L.Control.List = L.Control.extend({
     el.classList.add(this.options.itemClassName)
     el.textContent = info.name
     el.dataset.id = id
-    el.dataset.coords = this.options.coordsFunction(info).join(";")
+    const coords = this.options.coordsFunction(info)
+    if (coords) el.dataset.coords = coords.join(";")
 
     el.addEventListener("click", (e) => {
+      if (!e.target.dataset.coords) return
       let [dimension, x, _, z] = e.target.dataset.coords.split(";")
       this.options.layerManager.switchToDimension(dimension)
       this._map.panTo([parseFloat(z), parseFloat(x)])
@@ -92,7 +94,12 @@ L.Control.List = L.Control.extend({
     let el = Array.from(this._list.children).filter((e) => e.dataset.id === id)[0]
     if (!!el) {
       el.textContent = info.name
-      el.dataset.coords = this.options.coordsFunction(info).join(";")
+      const coords = this.options.coordsFunction(info)
+      if (coords) {
+        el.dataset.coords = coords.join(";")
+      } else {
+        delete el.dataset.coords
+      }
     }
   },
 
@@ -146,7 +153,8 @@ L.control.trainList = (layerManager) =>
     itemClassName: "train",
     tooltip: "Trains",
     coordsFunction: (t) => {
-      const c = t.cars[0].leading
+      const c = t.cars.find((car) => car.leading)?.leading
+      if (!c) return null
       return [c.dimension, c.location.x, c.location.y, c.location.z]
     },
     layerManager,

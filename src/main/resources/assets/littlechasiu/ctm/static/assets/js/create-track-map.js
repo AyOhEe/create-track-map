@@ -190,6 +190,7 @@ function startMapUpdates() {
       }
 
       train.cars.forEach((car, i) => {
+        if (!car.leading || !car.trailing) return
         let parts = car.portal
           ? [
               [car.leading.dimension, [xz(car.leading.location), xz(car.portal.from.location)]],
