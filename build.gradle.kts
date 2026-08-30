@@ -63,7 +63,11 @@ dependencies {
     shade("io.ktor:ktor-server-cio-jvm:$ktor_version")
     shade("io.ktor:ktor-server-core-jvm:$ktor_version")
     shade("io.ktor:ktor-server-cors-jvm:$ktor_version")
-    shade("org.jetbrains.kotlin-wrappers:kotlin-css-jvm:$kotlin_css_version")
+    shade("org.jetbrains.kotlinx:kotlinx-io-core-jvm:$kotlin_io_version")
+    shade("org.jetbrains.kotlinx:kotlinx-io-bytestring-jvm:$kotlin_io_version")
+    shade("org.jetbrains.kotlin-wrappers:kotlin-css-jvm:$kotlin_css_version") {
+        isTransitive = false
+    }
 
     // included in Kotlin for Forge
     compileOnly("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlin_json_version")
@@ -145,6 +149,12 @@ minecraft {
 
 val targetJavaVersion = 17
 val preferredJvm = JvmTarget.JVM_17
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(targetJavaVersion))
+    }
+}
 
 kotlin {
     compilerOptions {
